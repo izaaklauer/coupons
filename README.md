@@ -1,6 +1,6 @@
-# %%wp_project%%
+# coupons
 
-%%wp_project_description%%
+izaak's great potato serving microservice
 
 ### First clone
 
@@ -13,8 +13,8 @@ Start your server with `make serve`
 ```
 $ make serve
 
-go run cmd/%%wp_project%%-api/main.go config/config_local.hcl
-starting %%wp_project%%.......
+go run cmd/coupons-api/main.go config/config_local.hcl
+starting coupons.......
 2022/12/02 20:58:46 Serving on "localhost:8080"
 
 ```
@@ -22,10 +22,10 @@ starting %%wp_project%%.......
 Then send a request via grpcurl:
 
 ```
-$ grpcurl -plaintext -d '{"message": "hello from local development"}' localhost:8080 %%wp_project%%.v1.%%Wp_project%%Service/HelloWorld
+$ grpcurl -plaintext -d '{"message": "hello from local development"}' localhost:8080 coupons.v1.CouponsService/HelloWorld
 
 {
-  "configMessage": "hello from %%wp_project%%",
+  "configMessage": "hello from coupons",
   "requestMessage": "hello from local development",
   "now": "2022-12-03T02:01:19.505743Z"
 }
